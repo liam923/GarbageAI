@@ -1,19 +1,17 @@
-// const Gpio = require('pigpio').Gpio;
+const Gpio = require('pigpio').Gpio;
 const config = require('config');
 
 var timer = null;
-// const servo = new Gpio(config.servoGPIO, {mopde: Gpio.OUTPUT});
+const servo = new Gpio(config.servoGPIO, {mopde: Gpio.OUTPUT});
 
 function setDutyCycle(dutyCycle, delay) {
     if (delay == 0 || typeof delay === 'undefined') {
         clearTimeout(timer);
-        // servo.servoWrite(dutyCycle);
-        console.log(dutyCycle);
+        servo.servoWrite(dutyCycle);
     } else {
         timer = setTimeout(function() {
             clearTimeout(timer);
-            // servo.servoWrite(dutyCycle);
-            console.log(dutyCycle);
+            servo.servoWrite(dutyCycle);
         }, delay);
     }
 }
