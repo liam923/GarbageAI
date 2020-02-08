@@ -15,8 +15,18 @@ router.post('/', function(req, res, next) {
         duration = config.openTime;
     }
 
-    manager.open(duration);
-    res.send(config.successMessage);
+    var direction = "";
+    if ("direction" in req.query) {
+        direction = req.query.direction;
+    }
+    if (direction !== "left" && direction !== "right") {
+        res.status(400).send({
+            message: "Expected direction to be left or right"
+        });
+    } else {
+        manager.open(duration, direction);
+        res.send(config.successMessage);
+    }
 });
 
 router.post('/hold/', function(req, res, next) {

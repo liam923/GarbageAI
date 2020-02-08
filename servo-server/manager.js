@@ -1,17 +1,19 @@
-const Gpio = require('pigpio').Gpio;
+// const Gpio = require('pigpio').Gpio;
 const config = require('config');
 
 var timer = null;
-const servo = new Gpio(config.servoGPIO, {mopde: Gpio.OUTPUT});
+// const servo = new Gpio(config.servoGPIO, {mopde: Gpio.OUTPUT});
 
 function setDutyCycle(dutyCycle, delay) {
     if (delay == 0 || typeof delay === 'undefined') {
         clearTimeout(timer);
-        servo.servoWrite(dutyCycle);
+        // servo.servoWrite(dutyCycle);
+        console.log(dutyCycle);
     } else {
         timer = setTimeout(function() {
             clearTimeout(timer);
-            servo.servoWrite(dutyCycle);
+            // servo.servoWrite(dutyCycle);
+            console.log(dutyCycle);
         }, delay);
     }
 }
@@ -21,8 +23,13 @@ class Manager {
      * Opens the door for a set period of time.
      * @param time the time interval, in seconds, to hold the door open
      */
-    open(time) {
-        setDutyCycle(config.openDutyCycle);
+    open(time, direction) {
+        if (direction === "left") {
+            setDutyCycle(config.leftDutyCycle);
+        }
+        if (direction === "right") {
+            setDutyCycle(config.rightDutyCycle);
+        }
         setDutyCycle(config.closeDutyCycle, time * 1000);
     }
 
