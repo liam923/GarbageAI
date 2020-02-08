@@ -6,5 +6,7 @@ target 'GarbageAI-Camera' do
   use_frameworks!
 
   # Pods for GarbageAI-Camera
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Storage'
 
 end

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98806D3D23EEB5AF009757AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98806D3C23EEB5AF009757AB /* GoogleService-Info.plist */; };
+		98806D3F23EEB698009757AB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98806D3E23EEB698009757AB /* StorageManager.swift */; };
 		98C884CC23EEB08C00CD89F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C884CB23EEB08C00CD89F2 /* AppDelegate.swift */; };
 		98C884CE23EEB08C00CD89F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C884CD23EEB08C00CD89F2 /* SceneDelegate.swift */; };
 		98C884D023EEB08C00CD89F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C884CF23EEB08C00CD89F2 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		0996C3887059CD5FE54378A9 /* Pods_GarbageAI_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarbageAI_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448EBA0200AB286761D9138 /* Pods-GarbageAI-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageAI-Camera.release.xcconfig"; path = "Target Support Files/Pods-GarbageAI-Camera/Pods-GarbageAI-Camera.release.xcconfig"; sourceTree = "<group>"; };
+		98806D3C23EEB5AF009757AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98806D3E23EEB698009757AB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		98C884C823EEB08C00CD89F2 /* GarbageAI-Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GarbageAI-Camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C884CB23EEB08C00CD89F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C884CD23EEB08C00CD89F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				98C884D423EEB08C00CD89F2 /* Assets.xcassets */,
 				98C884D623EEB08C00CD89F2 /* LaunchScreen.storyboard */,
 				98C884D923EEB08C00CD89F2 /* Info.plist */,
+				98806D3C23EEB5AF009757AB /* GoogleService-Info.plist */,
+				98806D3E23EEB698009757AB /* StorageManager.swift */,
 			);
 			path = "GarbageAI-Camera";
 			sourceTree = "<group>";
@@ -88,7 +94,6 @@
 				F900E8C5552BCF378AAFB43C /* Pods-GarbageAI-Camera.debug.xcconfig */,
 				7448EBA0200AB286761D9138 /* Pods-GarbageAI-Camera.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +108,7 @@
 				98C884C423EEB08C00CD89F2 /* Sources */,
 				98C884C523EEB08C00CD89F2 /* Frameworks */,
 				98C884C623EEB08C00CD89F2 /* Resources */,
+				2C3634D0EE1CA7FDF3F62AFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C884D823EEB08C00CD89F2 /* LaunchScreen.storyboard in Resources */,
+				98806D3D23EEB5AF009757AB /* GoogleService-Info.plist in Resources */,
 				98C884D523EEB08C00CD89F2 /* Assets.xcassets in Resources */,
 				98C884D323EEB08C00CD89F2 /* Main.storyboard in Resources */,
 			);
@@ -182,6 +189,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2C3634D0EE1CA7FDF3F62AFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI-Camera/Pods-GarbageAI-Camera-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI-Camera/Pods-GarbageAI-Camera-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GarbageAI-Camera/Pods-GarbageAI-Camera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -190,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C884D023EEB08C00CD89F2 /* ViewController.swift in Sources */,
+				98806D3F23EEB698009757AB /* StorageManager.swift in Sources */,
 				98C884CC23EEB08C00CD89F2 /* AppDelegate.swift in Sources */,
 				98C884CE23EEB08C00CD89F2 /* SceneDelegate.swift in Sources */,
 			);
@@ -339,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 536W5472QR;
 				INFOPLIST_FILE = "GarbageAI-Camera/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 536W5472QR;
 				INFOPLIST_FILE = "GarbageAI-Camera/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
