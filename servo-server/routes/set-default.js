@@ -20,7 +20,8 @@ function setString(req, parameterName, configName) {
 router.put('/', function(req, res, next) {
     setPositive(req, "openTime", "openTime");
     setPositive(req, "forever", "forever");
-    setPositive(req, "openDutyCycle", "openDutyCycle");
+    setPositive(req, "leftDutyCycle", "leftDutyCycle");
+    setPositive(req, "rightDutyCycle", "rightDutyCycle");
     setPositive(req, "closeDutyCycle", "closeDutyCycle");
     setPositive(req, "servoGPIO", "servoGPIO");
 
