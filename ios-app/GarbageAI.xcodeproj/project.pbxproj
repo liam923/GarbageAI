@@ -3,29 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7E67D608FC706328081E07CC /* Pods_GarbageAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8F3462E309470239F545A0 /* Pods_GarbageAI.framework */; };
+		985CE9E423EE7F5C005C8566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */; };
+		985CE9E623EE8163005C8566 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985CE9E523EE8163005C8566 /* SignInController.swift */; };
 		9893C27123EE7D550040FC56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27023EE7D550040FC56 /* AppDelegate.swift */; };
 		9893C27323EE7D550040FC56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27223EE7D550040FC56 /* SceneDelegate.swift */; };
-		9893C27523EE7D550040FC56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27423EE7D550040FC56 /* ViewController.swift */; };
+		9893C27523EE7D550040FC56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27423EE7D550040FC56 /* HomeViewController.swift */; };
 		9893C27823EE7D550040FC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27623EE7D550040FC56 /* Main.storyboard */; };
 		9893C27A23EE7D560040FC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27923EE7D560040FC56 /* Assets.xcassets */; };
 		9893C27D23EE7D560040FC56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27B23EE7D560040FC56 /* LaunchScreen.storyboard */; };
+		98ECED4523EE8B1E0057320F /* ReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */; };
+		98ECED4723EE8EA80057320F /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4623EE8EA80057320F /* ScannerViewController.swift */; };
+		98ECED4923EE91190057320F /* TrashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4823EE91190057320F /* TrashType.swift */; };
+		98ECED4B23EE91B80057320F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4A23EE91B80057320F /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4642D151E16737559EC0B4EF /* Pods-GarbageAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageAI.release.xcconfig"; path = "Target Support Files/Pods-GarbageAI/Pods-GarbageAI.release.xcconfig"; sourceTree = "<group>"; };
+		985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		985CE9E523EE8163005C8566 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		9893C26D23EE7D550040FC56 /* GarbageAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarbageAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9893C27023EE7D550040FC56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9893C27223EE7D550040FC56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9893C27423EE7D550040FC56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9893C27423EE7D550040FC56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9893C27723EE7D550040FC56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9893C27923EE7D560040FC56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9893C27C23EE7D560040FC56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9893C27E23EE7D560040FC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSegue.swift; sourceTree = "<group>"; };
+		98ECED4623EE8EA80057320F /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		98ECED4823EE91190057320F /* TrashType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashType.swift; sourceTree = "<group>"; };
+		98ECED4A23EE91B80057320F /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D8F3462E309470239F545A0 /* Pods_GarbageAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarbageAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62202F2BB3FB2020C3F014 /* Pods-GarbageAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageAI.debug.xcconfig"; path = "Target Support Files/Pods-GarbageAI/Pods-GarbageAI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +85,17 @@
 			children = (
 				9893C27023EE7D550040FC56 /* AppDelegate.swift */,
 				9893C27223EE7D550040FC56 /* SceneDelegate.swift */,
-				9893C27423EE7D550040FC56 /* ViewController.swift */,
+				9893C27423EE7D550040FC56 /* HomeViewController.swift */,
+				985CE9E523EE8163005C8566 /* SignInController.swift */,
+				98ECED4623EE8EA80057320F /* ScannerViewController.swift */,
 				9893C27623EE7D550040FC56 /* Main.storyboard */,
 				9893C27923EE7D560040FC56 /* Assets.xcassets */,
 				9893C27B23EE7D560040FC56 /* LaunchScreen.storyboard */,
 				9893C27E23EE7D560040FC56 /* Info.plist */,
+				985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */,
+				98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */,
+				98ECED4823EE91190057320F /* TrashType.swift */,
+				98ECED4A23EE91B80057320F /* Database.swift */,
 			);
 			path = GarbageAI;
 			sourceTree = "<group>";
@@ -88,7 +106,6 @@
 				EE62202F2BB3FB2020C3F014 /* Pods-GarbageAI.debug.xcconfig */,
 				4642D151E16737559EC0B4EF /* Pods-GarbageAI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +120,8 @@
 				9893C26923EE7D550040FC56 /* Sources */,
 				9893C26A23EE7D550040FC56 /* Frameworks */,
 				9893C26B23EE7D550040FC56 /* Resources */,
+				437C5DA2369BA9FC7236D475 /* [CP] Embed Pods Frameworks */,
+				54AE99E3697BAFCBB4C857F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9893C27D23EE7D560040FC56 /* LaunchScreen.storyboard in Resources */,
+				985CE9E423EE7F5C005C8566 /* GoogleService-Info.plist in Resources */,
 				9893C27A23EE7D560040FC56 /* Assets.xcassets in Resources */,
 				9893C27823EE7D550040FC56 /* Main.storyboard in Resources */,
 			);
@@ -160,6 +180,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		437C5DA2369BA9FC7236D475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54AE99E3697BAFCBB4C857F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GarbageAI/Pods-GarbageAI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		63A489825DCAB663BC3A9A67 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,8 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9893C27523EE7D550040FC56 /* ViewController.swift in Sources */,
+				9893C27523EE7D550040FC56 /* HomeViewController.swift in Sources */,
+				98ECED4723EE8EA80057320F /* ScannerViewController.swift in Sources */,
+				98ECED4923EE91190057320F /* TrashType.swift in Sources */,
+				985CE9E623EE8163005C8566 /* SignInController.swift in Sources */,
 				9893C27123EE7D550040FC56 /* AppDelegate.swift in Sources */,
+				98ECED4523EE8B1E0057320F /* ReplaceSegue.swift in Sources */,
+				98ECED4B23EE91B80057320F /* Database.swift in Sources */,
 				9893C27323EE7D550040FC56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 536W5472QR;
 				INFOPLIST_FILE = GarbageAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 536W5472QR;
 				INFOPLIST_FILE = GarbageAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

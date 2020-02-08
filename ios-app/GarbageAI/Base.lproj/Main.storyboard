@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wcs-xj-tuz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GarbageAI-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFf-dg-DnR">
+                                <rect key="frame" x="157" y="732" width="100" height="30"/>
+                                <state key="normal" title="Scan QR Code"/>
+                                <connections>
+                                    <segue destination="IEa-b0-c5D" kind="show" id="VxS-hD-d2K"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No trash yet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ITI-0R-5ST">
+                                <rect key="frame" x="20" y="144" width="374" height="580"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lFf-dg-DnR" firstAttribute="top" secondItem="ITI-0R-5ST" secondAttribute="bottom" constant="8" id="4RJ-hA-Ao0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFf-dg-DnR" secondAttribute="bottom" constant="100" id="7f3-Ht-YRE"/>
+                            <constraint firstItem="ITI-0R-5ST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dgh-j1-Rmh"/>
+                            <constraint firstItem="lFf-dg-DnR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVH-G3-LNz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITI-0R-5ST" secondAttribute="trailing" constant="20" id="pyo-IS-lvh"/>
+                            <constraint firstItem="ITI-0R-5ST" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="yS8-vE-cio"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="GarbageAI" id="Kbs-76-c8k">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="abe-LH-MKK">
+                            <connections>
+                                <action selector="signOut:" destination="BYZ-38-t0r" id="us3-XI-UJN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="ITI-0R-5ST" id="A5k-bo-CUc"/>
+                        <segue destination="jFq-GN-Utl" kind="custom" identifier="signIn" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="MQG-Nx-Ici"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3366.666666666667" y="-289.28571428571428"/>
+        </scene>
+        <!--Scan Code-->
+        <scene sceneID="SKz-GQ-Nkc">
+            <objects>
+                <viewController id="IEa-b0-c5D" customClass="ScannerViewController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QOa-Gy-LzR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mzo-8u-rgm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan Code" id="5Mc-HQ-DZN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vod-pc-jw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="-289"/>
+        </scene>
+        <!--GarbageAI-->
+        <scene sceneID="lbr-dX-jWH">
+            <objects>
+                <navigationController id="Wcs-xj-tuz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="GarbageAI" id="5Gk-OZ-XRq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o8g-GL-MKY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jFq-GN-Utl" kind="relationship" relationship="rootViewController" id="YVx-B1-Ciw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQR-nI-o9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="88"/>
+        </scene>
+        <!--GarbageAI-->
+        <scene sceneID="cJv-5x-1ex">
+            <objects>
+                <viewController id="jFq-GN-Utl" customClass="SignInController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="flv-LB-fSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-py-XcN" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="383" width="374" height="130"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Gjt-GP-Fkn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QjB-py-XcN" firstAttribute="leading" secondItem="MpY-JC-WBr" secondAttribute="leading" constant="20" id="HhZ-bb-B6A"/>
+                            <constraint firstItem="MpY-JC-WBr" firstAttribute="trailing" secondItem="QjB-py-XcN" secondAttribute="trailing" constant="20" id="VML-j4-QOI"/>
+                            <constraint firstItem="QjB-py-XcN" firstAttribute="centerY" secondItem="flv-LB-fSJ" secondAttribute="centerY" id="Zku-rP-CEy"/>
+                            <constraint firstItem="QjB-py-XcN" firstAttribute="centerX" secondItem="flv-LB-fSJ" secondAttribute="centerX" id="i2C-0O-cpY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MpY-JC-WBr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GarbageAI" id="h1H-LL-ejQ"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="home" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="tnN-hu-1cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1K5-jx-lm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367" y="470"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MQG-Nx-Ici"/>
+    </inferredMetricsTieBreakers>
 </document>
