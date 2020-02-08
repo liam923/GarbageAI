@@ -8,5 +8,7 @@ target 'GarbageAI-Camera' do
   # Pods for GarbageAI-Camera
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
 end

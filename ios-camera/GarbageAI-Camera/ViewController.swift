@@ -29,7 +29,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-        imageView.image = info[.originalImage] as? UIImage
+        if let image = info[.originalImage] as? UIImage {
+            imageView.image = image
+            StorageManager.shared.upload(image: image, completion: { error in
+                print(error)
+            })
+        }
     }
     
 }
