@@ -4,7 +4,7 @@ from firebase_admin import firestore
 import qrcode
 import json
 from datetime import datetime
-import trash_type
+from trash_type import get_direction
 import requests
 
 default_app = firebase_admin.initialize_app()
@@ -39,10 +39,10 @@ class Trashcan:
         img = qrcode.make(data)
         img.save(filename)
 
-    def handle_trash(self, type_trash):
+    def handle_trash(self, trash_type):
         if trash_type in self.stats:
             self.stats[trash_type] += 1
         else:
             self.stats[trash_type] = 1
 
-        r = requests.post(url = API_ENDPOINT, params={"direction": trash_type.get_direction(type_trash)}, headers={"Authorization": "Bearer e0JcwTdkI2ULFLJeQ220httVa9uJRhIT"})
+        requests.post(url = API_ENDPOINT, params={"direction": get_direction(trash_type)}, headers={"Authorization": "Bearer e0JcwTdkI2ULFLJeQ220httVa9uJRhIT"})
