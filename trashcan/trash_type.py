@@ -1,11 +1,8 @@
 TRASH = "trash"
-PAPER = "paper"
-METAL = "metal"
-GLASS = "glass"
-PLASTIC = "plastic"
-CARDBOARD = "cardboard"
+COMPOST = "compost"
+RECYCLING = "recycling"
 
-all = [TRASH, PAPER, METAL, GLASS, PLASTIC, CARDBOARD]
+all = [COMPOST, RECYCLING, TRASH]
 
 def get_direction(trash_type):
     if trash_type == TRASH:

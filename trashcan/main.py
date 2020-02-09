@@ -2,29 +2,44 @@ from trashcan import Trashcan
 from trash_type import all as all_trash_types, pretty
 import sys
 import process
+import ssl
 from guizero import App, Text, Picture
 
 class Main():
     def __init__(self, trashcanID):
+        ssl._create_default_https_context = ssl._create_unverified_context
+
         self.trashcan = Trashcan(trashcanID)
         self.app = App(title="GarbageAI")
 
         self.stats_widget = Text(self.app, "")
+        self.stats_widget.size = 36
         self.update_stats()
 
         self.detected_widget = Text(self.app, "")
+        self.detected_widget.size = 36
 
         self.display_qr(None)
 
+        self.app.bg = "#00A8CC"
+        self.app.text_color = "#FFFFFF"
+        self.app.font = "Quicksand"
+
+        self.title_widget = Text(self.app, "garbage.ai")
+        self.title_widget.size = 72
+
+        self.app.set_full_screen()
         self.trashcan.listen(self.completion_handler)
         self.app.display()
 
     def update_stats(self):
         self.stats_widget.clear()
         arr = ["%s: %s" % (pretty(k), v) for k, v in self.trashcan.stats.items()]
+        self.stats_widget.append("\n")
         self.stats_widget.append("\n".join(arr + [""] * (len(all_trash_types) - len(arr))))
 
     def completion_handler(self, doc):
+        self.title_widget.visible = False
         data = doc.to_dict()
         process.download(data[u'url'], 'temp/image.jpg')
         trash_type = process.process('temp/image.jpg')
