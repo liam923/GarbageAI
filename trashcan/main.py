@@ -4,6 +4,7 @@ import sys
 import process
 import ssl
 from guizero import App, Text, Picture
+import requests
 
 class Main():
     def __init__(self, trashcanID):
@@ -11,6 +12,8 @@ class Main():
 
         self.trashcan = Trashcan(trashcanID)
         self.app = App(title="GarbageAI")
+
+        requests.post(url = "https://happening-prairiedog-9299.dataplicity.io/open", params={"direction": "right"}, headers={"Authorization": "Bearer e0JcwTdkI2ULFLJeQ220httVa9uJRhIT"})
 
         self.stats_widget = Text(self.app, "")
         self.stats_widget.size = 36
@@ -21,7 +24,7 @@ class Main():
 
         self.display_qr(None)
 
-        self.app.bg = "#00A8CC"
+        self.app.bg = "#142850"
         self.app.text_color = "#FFFFFF"
         self.app.font = "Quicksand"
 

@@ -5,7 +5,7 @@ RECYCLING = "landfill"
 all = [COMPOST, RECYCLING, TRASH]
 
 def get_direction(trash_type):
-    if trash_type == TRASH:
+    if trash_type == TRASH or trash_type == COMPOST or trash_type == "Compost":
         return "left"
     else:
         return "right"
