@@ -1,6 +1,6 @@
 TRASH = "trash"
 COMPOST = "compost"
-RECYCLING = "recycling"
+RECYCLING = "landfill"
 
 all = [COMPOST, RECYCLING, TRASH]
 
@@ -11,4 +11,6 @@ def get_direction(trash_type):
         return "right"
 
 def pretty(trash_type):
+    if trash_type == RECYCLING:
+        return "Recycling"
     return trash_type.capitalize()
