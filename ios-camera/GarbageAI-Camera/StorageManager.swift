@@ -25,7 +25,8 @@ class StorageManager {
         let id = UUID().uuidString
         let time = Date()
         let imageRef = storeRef.child("\(id).jpg")
-        imageRef.putData(image.jpegData(compressionQuality: 0.8)!, metadata: nil) { (metadata, error) in
+    
+        imageRef.putData(image.jpegData(compressionQuality: 0.0)!, metadata: nil) { (metadata, error) in
             if let error = error {
                 completion(error)
                 return
