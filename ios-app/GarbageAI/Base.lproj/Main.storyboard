@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="2375" y="88"/>
         </scene>
-        <!--GarbageAI-->
+        <!--Garbage.AI-->
         <scene sceneID="cJv-5x-1ex">
             <objects>
                 <viewController id="jFq-GN-Utl" customClass="SignInController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="caU-mL-3Q8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-py-XcN" customClass="GIDSignInButton">
                                 <rect key="frame" x="20" y="383" width="374" height="130"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,24 +58,36 @@
                                     <constraint firstAttribute="height" constant="130" id="Gjt-GP-Fkn"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garbage.AI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-I0-qbI">
+                                <rect key="frame" x="51" y="148" width="312" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="caU-mL-3Q8" firstAttribute="top" secondItem="flv-LB-fSJ" secondAttribute="top" id="0oX-4Q-UoM"/>
                             <constraint firstItem="QjB-py-XcN" firstAttribute="leading" secondItem="MpY-JC-WBr" secondAttribute="leading" constant="20" id="HhZ-bb-B6A"/>
+                            <constraint firstItem="mJo-I0-qbI" firstAttribute="top" secondItem="MpY-JC-WBr" secondAttribute="top" constant="60" id="No4-Mh-n6N"/>
+                            <constraint firstItem="caU-mL-3Q8" firstAttribute="leading" secondItem="MpY-JC-WBr" secondAttribute="leading" id="Su6-W6-MYt"/>
                             <constraint firstItem="MpY-JC-WBr" firstAttribute="trailing" secondItem="QjB-py-XcN" secondAttribute="trailing" constant="20" id="VML-j4-QOI"/>
                             <constraint firstItem="QjB-py-XcN" firstAttribute="centerY" secondItem="flv-LB-fSJ" secondAttribute="centerY" id="Zku-rP-CEy"/>
                             <constraint firstItem="QjB-py-XcN" firstAttribute="centerX" secondItem="flv-LB-fSJ" secondAttribute="centerX" id="i2C-0O-cpY"/>
+                            <constraint firstItem="caU-mL-3Q8" firstAttribute="trailing" secondItem="MpY-JC-WBr" secondAttribute="trailing" id="nms-z7-UXX"/>
+                            <constraint firstItem="mJo-I0-qbI" firstAttribute="centerX" secondItem="flv-LB-fSJ" secondAttribute="centerX" id="omp-oq-N5B"/>
+                            <constraint firstAttribute="bottom" secondItem="caU-mL-3Q8" secondAttribute="bottom" id="tcj-QU-qa9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MpY-JC-WBr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="GarbageAI" id="h1H-LL-ejQ"/>
+                    <navigationItem key="navigationItem" title="Garbage.AI" id="h1H-LL-ejQ"/>
                     <connections>
                         <segue destination="CKL-We-4pG" kind="custom" identifier="home" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="MUl-ZA-kQw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1K5-jx-lm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3367" y="470"/>
+            <point key="canvasLocation" x="3366.666666666667" y="469.41964285714283"/>
         </scene>
         <!--GarbageAI-->
         <scene sceneID="If2-SI-F0R">
@@ -89,8 +104,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="385"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="William Stevenson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be6-uP-g1Z">
-                                            <rect key="frame" x="20" y="11" width="215.5" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be6-uP-g1Z">
+                                            <rect key="frame" x="20" y="11" width="68.5" height="30"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -244,7 +259,10 @@
             <point key="canvasLocation" x="4451" y="135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="283" height="400"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ljm-dw-Jfi"/>
+        <segue reference="YVx-B1-Ciw"/>
     </inferredMetricsTieBreakers>
 </document>
