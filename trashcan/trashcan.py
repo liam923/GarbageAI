@@ -18,6 +18,9 @@ class Trashcan:
         self.trash = db.collection(u'trashcans').document(self.trashcanID).collection("trash")
         self.stats = {}
 
+        self.latitude = 42.3508
+        self.longitude = -71.0469
+
     def listen(self, callback):
         seen_trash = set()
 
@@ -35,7 +38,7 @@ class Trashcan:
         query_watch = query.on_snapshot(on_snapshot)
 
     def generate_qr_code(self, trash_id, trash_type, filename):
-        data = json.dumps({"trashType": trash_type, "trashID": trash_id, "trashcanID": self.trashcanID})
+        data = json.dumps({"trashType": trash_type, "trashID": trash_id, "trashcanID": self.trashcanID, "latitude": self.latitude, "longitude": self.longitude, "trashcanCounts": self.stats})
         img = qrcode.make(data)
         img.save(filename)
 

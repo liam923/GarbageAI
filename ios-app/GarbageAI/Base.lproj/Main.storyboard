@@ -7,56 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GarbageAI-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFf-dg-DnR">
-                                <rect key="frame" x="157" y="732" width="100" height="30"/>
-                                <state key="normal" title="Scan QR Code"/>
-                                <connections>
-                                    <segue destination="IEa-b0-c5D" kind="show" id="VxS-hD-d2K"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No trash yet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ITI-0R-5ST">
-                                <rect key="frame" x="20" y="144" width="374" height="580"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="lFf-dg-DnR" firstAttribute="top" secondItem="ITI-0R-5ST" secondAttribute="bottom" constant="8" id="4RJ-hA-Ao0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFf-dg-DnR" secondAttribute="bottom" constant="100" id="7f3-Ht-YRE"/>
-                            <constraint firstItem="ITI-0R-5ST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dgh-j1-Rmh"/>
-                            <constraint firstItem="lFf-dg-DnR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UVH-G3-LNz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITI-0R-5ST" secondAttribute="trailing" constant="20" id="pyo-IS-lvh"/>
-                            <constraint firstItem="ITI-0R-5ST" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="yS8-vE-cio"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="GarbageAI" id="Kbs-76-c8k">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="abe-LH-MKK">
-                            <connections>
-                                <action selector="signOut:" destination="BYZ-38-t0r" id="us3-XI-UJN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="textView" destination="ITI-0R-5ST" id="A5k-bo-CUc"/>
-                        <segue destination="jFq-GN-Utl" kind="custom" identifier="signIn" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="MQG-Nx-Ici"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3366.666666666667" y="-289.28571428571428"/>
-        </scene>
         <!--Scan Code-->
         <scene sceneID="SKz-GQ-Nkc">
             <objects>
@@ -71,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vod-pc-jw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4406" y="-289"/>
+            <point key="canvasLocation" x="3451" y="-996"/>
         </scene>
         <!--GarbageAI-->
         <scene sceneID="lbr-dX-jWH">
@@ -117,15 +67,184 @@
                     </view>
                     <navigationItem key="navigationItem" title="GarbageAI" id="h1H-LL-ejQ"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="home" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="tnN-hu-1cs"/>
+                        <segue destination="CKL-We-4pG" kind="custom" identifier="home" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="MUl-ZA-kQw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1K5-jx-lm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3367" y="470"/>
         </scene>
+        <!--GarbageAI-->
+        <scene sceneID="If2-SI-F0R">
+            <objects>
+                <tableViewController id="CKL-We-4pG" customClass="HomeViewController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="S0v-XF-fBT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="trash" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" rowHeight="385" id="l3L-JM-wc5">
+                                <rect key="frame" x="20" y="55.5" width="374" height="385"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l3L-JM-wc5" id="dTU-ED-V9J">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="385"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="William Stevenson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be6-uP-g1Z">
+                                            <rect key="frame" x="20" y="11" width="215.5" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are 1 point away from a reward." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdG-Ga-VCB">
+                                            <rect key="frame" x="20" y="49" width="271" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDs-HI-RnI" customClass="TrashMapView" customModule="GarbageAI" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="78" width="334" height="296"/>
+                                        </mapView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CdG-Ga-VCB" firstAttribute="top" secondItem="be6-uP-g1Z" secondAttribute="bottom" constant="8" id="5gj-cC-eUw"/>
+                                        <constraint firstItem="CdG-Ga-VCB" firstAttribute="leading" secondItem="dTU-ED-V9J" secondAttribute="leadingMargin" id="Ly6-dS-3IU"/>
+                                        <constraint firstItem="be6-uP-g1Z" firstAttribute="top" secondItem="dTU-ED-V9J" secondAttribute="topMargin" id="OQP-Xj-B4J"/>
+                                        <constraint firstItem="FDs-HI-RnI" firstAttribute="leading" secondItem="dTU-ED-V9J" secondAttribute="leadingMargin" id="YCu-at-KrI"/>
+                                        <constraint firstItem="FDs-HI-RnI" firstAttribute="bottom" secondItem="dTU-ED-V9J" secondAttribute="bottomMargin" id="bxm-vg-4Ho"/>
+                                        <constraint firstItem="be6-uP-g1Z" firstAttribute="leading" secondItem="dTU-ED-V9J" secondAttribute="leadingMargin" id="m8U-Vs-vG8"/>
+                                        <constraint firstItem="FDs-HI-RnI" firstAttribute="top" secondItem="CdG-Ga-VCB" secondAttribute="bottom" constant="8" id="trI-2q-JtR"/>
+                                        <constraint firstItem="FDs-HI-RnI" firstAttribute="trailing" secondItem="dTU-ED-V9J" secondAttribute="trailingMargin" id="xdP-OW-nqe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="trash" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="trash" textLabel="t8W-C4-0J5" detailTextLabel="VGT-Yk-Iis" style="IBUITableViewCellStyleValue1" id="XSL-qf-Axs">
+                                <rect key="frame" x="20" y="440.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XSL-qf-Axs" id="DgY-Xt-ZIN">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t8W-C4-0J5">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VGT-Yk-Iis">
+                                            <rect key="frame" x="291" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="trash" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="count" textLabel="WMb-e9-YDv" style="IBUITableViewCellStyleDefault" id="prc-OO-z8m">
+                                <rect key="frame" x="20" y="484" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="prc-OO-z8m" id="BJy-Ld-HJ3">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WMb-e9-YDv">
+                                            <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CKL-We-4pG" id="PSX-V8-nj7"/>
+                            <outlet property="delegate" destination="CKL-We-4pG" id="a5d-Sf-gay"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="GarbageAI" id="P5H-gC-c94">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="rvM-Xx-UAv">
+                            <connections>
+                                <action selector="signOut:" destination="CKL-We-4pG" id="dX7-tH-gR9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Scan QR" id="lYW-Bu-ap5">
+                            <connections>
+                                <segue destination="IEa-b0-c5D" kind="show" id="RFu-RY-DaQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ai8-Vj-C8T" kind="show" identifier="profileToMap" id="v5e-Jv-1Gt"/>
+                        <segue destination="jFq-GN-Utl" kind="custom" identifier="signOut" customClass="ReplaceSegue" customModule="GarbageAI" customModuleProvider="target" id="ljm-dw-Jfi"/>
+                        <segue destination="xdb-i4-9GJ" kind="show" identifier="explore" id="rHV-eZ-c8C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JX-XA-qAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457.971014492754" y="-281.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="36T-Nz-ScC">
+            <objects>
+                <viewController id="xdb-i4-9GJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHC-9T-0jK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AZN-fU-qiB" customClass="TrashMapView" customModule="GarbageAI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="414" height="802"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AZN-fU-qiB" secondAttribute="bottom" constant="20" symbolic="YES" id="WU7-Ja-qEE"/>
+                            <constraint firstItem="AZN-fU-qiB" firstAttribute="trailing" secondItem="vDt-7K-xB2" secondAttribute="trailing" id="nXG-8U-uLj"/>
+                            <constraint firstItem="AZN-fU-qiB" firstAttribute="leading" secondItem="vDt-7K-xB2" secondAttribute="leading" id="r5r-HR-g6L"/>
+                            <constraint firstItem="AZN-fU-qiB" firstAttribute="top" secondItem="WHC-9T-0jK" secondAttribute="top" constant="20" symbolic="YES" id="rcW-Pp-dp7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vDt-7K-xB2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S2S-ax-FEs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XtY-b4-zjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4450.7246376811599" y="-524.33035714285711"/>
+        </scene>
+        <!--Trash View Controller-->
+        <scene sceneID="xog-yg-6gu">
+            <objects>
+                <viewController id="ai8-Vj-C8T" customClass="TrashViewController" customModule="GarbageAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F4c-hc-1ZC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-wX-Ln2">
+                                <rect key="frame" x="0.0" y="20" width="414" height="802"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g2T-wX-Ln2" secondAttribute="bottom" constant="20" symbolic="YES" id="6Ng-9P-5Y3"/>
+                            <constraint firstItem="g2T-wX-Ln2" firstAttribute="top" secondItem="F4c-hc-1ZC" secondAttribute="top" constant="20" symbolic="YES" id="97e-iv-0DE"/>
+                            <constraint firstItem="g2T-wX-Ln2" firstAttribute="trailing" secondItem="8Ig-n8-a27" secondAttribute="trailing" id="Aqe-pk-ITp"/>
+                            <constraint firstItem="g2T-wX-Ln2" firstAttribute="leading" secondItem="8Ig-n8-a27" secondAttribute="leading" id="fQ6-Tr-cdd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Ig-n8-a27"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pia-vZ-Wsy"/>
+                    <connections>
+                        <outlet property="mapView" destination="g2T-wX-Ln2" id="szg-e4-SjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vn-2C-gPY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4451" y="135"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MQG-Nx-Ici"/>
+        <segue reference="ljm-dw-Jfi"/>
     </inferredMetricsTieBreakers>
 </document>
