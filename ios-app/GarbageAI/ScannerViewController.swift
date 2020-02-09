@@ -86,8 +86,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
 
     func found(code: String) {
-        if let trashType = TrashType(rawValue: code) {
-            Database.shared.recordTrash(type: trashType)
+        let jsonData = code.data(using: .utf8) ?? Data()
+        if let data = try? JSONDecoder().decode(QRData.self, from: jsonData) {
+            Database.shared.record(trash: data)
         }
         self.navigationController?.popViewController(animated: true)
     }

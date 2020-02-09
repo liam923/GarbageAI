@@ -20,14 +20,14 @@ class Database {
         self.db = Firestore.firestore()
     }
     
-    func recordTrash(type: TrashType) {
+    func record(trash: QRData) {
         if let user = Auth.auth().currentUser {
             let doc = db.collection("users").document(user.uid)
             func update() {
                 guard var counts = self.counts else { return }
-                counts[type] = 1 + (counts[type] ?? 0)
+                counts[trash.trashType] = 1 + (counts[trash.trashType] ?? 0)
                 self.counts = counts
-                doc.setData([type.rawValue: counts[type]!], merge: true)
+                doc.setData([trash.trashType.rawValue: counts[trash.trashType]!], merge: true)
             }
             if let _ = counts {
                 update()
@@ -40,6 +40,9 @@ class Database {
                 }
             }
         }
+        
+        let doc = db.collection("trashcans").document(trash.trashcanID).collection("trash").document(trash.trashID)
+        doc.updateData(["type": trash.trashType.rawValue])
     }
     
     func getCounts(handler: @escaping ([TrashType: Int]) -> Void) -> ListenerRegistration? {

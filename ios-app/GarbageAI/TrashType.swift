@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TrashType: String {
+enum TrashType: String, Codable {
     case trash, paper, metal, glass, plastic, cardboard
     
     static func getAll() -> [TrashType] {

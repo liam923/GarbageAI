@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E67D608FC706328081E07CC /* Pods_GarbageAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8F3462E309470239F545A0 /* Pods_GarbageAI.framework */; };
+		984F080123EF84FE00267F62 /* QRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F080023EF84FE00267F62 /* QRData.swift */; };
 		985CE9E423EE7F5C005C8566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */; };
 		985CE9E623EE8163005C8566 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985CE9E523EE8163005C8566 /* SignInController.swift */; };
 		9893C27123EE7D550040FC56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27023EE7D550040FC56 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4642D151E16737559EC0B4EF /* Pods-GarbageAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageAI.release.xcconfig"; path = "Target Support Files/Pods-GarbageAI/Pods-GarbageAI.release.xcconfig"; sourceTree = "<group>"; };
+		984F080023EF84FE00267F62 /* QRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRData.swift; sourceTree = "<group>"; };
 		985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		985CE9E523EE8163005C8566 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		9893C26D23EE7D550040FC56 /* GarbageAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarbageAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */,
 				98ECED4823EE91190057320F /* TrashType.swift */,
 				98ECED4A23EE91B80057320F /* Database.swift */,
+				984F080023EF84FE00267F62 /* QRData.swift */,
 			);
 			path = GarbageAI;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9893C27523EE7D550040FC56 /* HomeViewController.swift in Sources */,
+				984F080123EF84FE00267F62 /* QRData.swift in Sources */,
 				98ECED4723EE8EA80057320F /* ScannerViewController.swift in Sources */,
 				98ECED4923EE91190057320F /* TrashType.swift in Sources */,
 				985CE9E623EE8163005C8566 /* SignInController.swift in Sources */,
