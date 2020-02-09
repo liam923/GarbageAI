@@ -7,6 +7,8 @@ import CodeScanner
 class ScannerViewController: UIViewController {
 
     private var scanner: CodeScanner!
+    
+    var read = false
 
     override func viewDidLoad() {
 
@@ -17,6 +19,11 @@ class ScannerViewController: UIViewController {
 
         self.scanner = CodeScanner(metadataObjectTypes: [AVMetadataObject.ObjectType.qr], preview: self.view)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        read = false
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -24,7 +31,7 @@ class ScannerViewController: UIViewController {
         CodeScanner.requestCameraPermission { (success) in
             if success {
                 self.scanner.scan(resultOutputs: { (outputs) in
-                    print(outputs)
+                    self.found(code: outputs.first ?? "")
                 })
             }
         }
@@ -32,7 +39,10 @@ class ScannerViewController: UIViewController {
 
     func found(code: String) {
         let jsonData = code.data(using: .utf8) ?? Data()
-        Database.shared.record(trash: try! JSONDecoder().decode(QRData.self, from: jsonData))
-        self.navigationController?.popViewController(animated: true)
+        if let data = try? JSONDecoder().decode(QRData.self, from: jsonData), !read {
+            read = true
+            Database.shared.record(trash: data)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

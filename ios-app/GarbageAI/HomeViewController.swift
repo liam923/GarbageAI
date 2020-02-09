@@ -30,7 +30,7 @@ class HomeViewController: UITableViewController {
             self.counts = counts.map({($0.key, $0.value)}).sorted(by: {$0.0.rawValue < $1.0.rawValue})
             self.tableView.reloadData()
             
-            if self.totalCount % self.rewardFrequency == 0 {
+            if self.totalCount % self.rewardFrequency == 0 && self.totalCount != 0 {
                 let alert = UIAlertController(title: "You got a reward!", message: "You got an award for recycling.", preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: nil))

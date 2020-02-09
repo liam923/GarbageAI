@@ -7,7 +7,7 @@ import requests
 import base64
 
 url = "https://automl.googleapis.com/v1beta1/projects/610553338848/locations/us-central1/models/ICN3385523845271126016:predict"
-token = "ya29.c.Ko8BvQc_uuPPIaP-Aqop_ZOh2rClDCxDRnfByjL_I_MU9HKiEhRcghu4WkP_FxC2103-3_LxgKi_AVWPEX7yCb8QgHS8ZkaEReWBXFBzw0LNbwaV9WSGu8ujQUopdkfQ0ZN-bvo9lt6ZUEt3gNiPsGWNOlvhhGa0gwSjoGm6dtaGlXbqCDHe1QH4B3GcfrYAGBY"
+token = "ya29.c.Ko8BvQfx3l8RY4Sunvt4DaH0oqaeRXZBlAGUFedHWrGsPiGkwEE2BVaoNpsn-AASrmSXQy7hr4yagjsqpqUsfL390RBtwdEBP__GMJB70IPBO6NpVZAW5nc_b7zb6krhvg0gxIGIng4Rcc7wZ5LIymmzQYC8SREKANHhiDr6LsXFEzCXH2UuCzYFjFmt6kCuTSM"
 
 def download(url, filename):
     Path("temp").mkdir(parents=True, exist_ok=True)
@@ -21,4 +21,8 @@ def process(filename):
         r = requests.post(url, data=body, headers={"Authorization": "Bearer %s" % token})
         print(r.text)
 
-        return r.json()['payload'][0]['displayName']  # waits till request is returned
+        j = r.json()
+        if 'payload' in j and len(j['payload']) > 0 and 'displayName' in j['payload'][0]:
+            return r.json()['payload'][0]['displayName']
+        else:
+            return TRASH
