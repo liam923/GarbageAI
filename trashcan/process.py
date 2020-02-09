@@ -3,26 +3,22 @@ import urllib.request
 from pathlib import Path
 import random
 import json
-from PIL import Image
-from resizeimage import resizeimage
-from watson_developer_cloud import VisualRecognitionV3
+import requests
+import base64
 
-visual_recognition = VisualRecognitionV3(
-    '2020-02-09',
-    iam_apikey='lfGJ9tvqtv9maRFfttyM61wGcrGIYD88zsY_Yq4ZdQWI'
-)
+url = "https://automl.googleapis.com/v1beta1/projects/610553338848/locations/us-central1/models/ICN3385523845271126016:predict"
+token = "ya29.c.Ko8BvQc_uuPPIaP-Aqop_ZOh2rClDCxDRnfByjL_I_MU9HKiEhRcghu4WkP_FxC2103-3_LxgKi_AVWPEX7yCb8QgHS8ZkaEReWBXFBzw0LNbwaV9WSGu8ujQUopdkfQ0ZN-bvo9lt6ZUEt3gNiPsGWNOlvhhGa0gwSjoGm6dtaGlXbqCDHe1QH4B3GcfrYAGBY"
 
 def download(url, filename):
     Path("temp").mkdir(parents=True, exist_ok=True)
     urllib.request.urlretrieve(url, filename)
 
 def process(filename):
-    with open(filename, 'r+b') as f:
-        classes = visual_recognition.classify(
-            f,
-            threshold='0.6',
-	        classifier_ids='WasteClassifier_1615383111').get_result()
-            
+    with open(filename, 'rb') as ff:
+        content = ff.read()
 
-    print(json.dumps(classes, indent=2))
-    return classes["images"][0]["classifiers"][0]["classes"][0]["class"]
+        body = json.dumps({'payload': {'image': {'image_bytes': base64.b64encode(content).decode('ascii') }}})
+        r = requests.post(url, data=body, headers={"Authorization": "Bearer %s" % token})
+        print(r.text)
+
+        return r.json()['payload'][0]['displayName']  # waits till request is returned
