@@ -49,7 +49,7 @@ class Trashcan:
         qr.add_data(data)
         qr.make(fit=True)
 
-        img = qr.make_image(fill_color="white", back_color="#00A8CC")
+        img = qr.make_image(fill_color="white", back_color="#124850")
         img.save(filename)
 
     def handle_trash(self, trash_type):

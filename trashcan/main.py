@@ -21,7 +21,7 @@ class Main():
 
         self.display_qr(None)
 
-        self.app.bg = "#00A8CC"
+        self.app.bg = "#124850"
         self.app.text_color = "#FFFFFF"
         self.app.font = "Quicksand"
 
