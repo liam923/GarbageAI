@@ -31,6 +31,7 @@ class ScannerViewController: UIViewController {
         CodeScanner.requestCameraPermission { (success) in
             if success {
                 self.scanner.scan(resultOutputs: { (outputs) in
+                    print(outputs)
                     self.found(code: outputs.first ?? "")
                 })
             }

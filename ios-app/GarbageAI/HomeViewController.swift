@@ -41,7 +41,7 @@ class HomeViewController: UITableViewController {
         }
         
         Database.shared.getHistory { (trash) in
-            self.trash = trash
+            self.trash = trash.sorted(by: { $0.time > $1.time })
             self.tableView.reloadData()
         }
     }
