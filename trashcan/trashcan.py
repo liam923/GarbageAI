@@ -36,7 +36,17 @@ class Trashcan:
 
     def generate_qr_code(self, trash_id, trash_type, filename):
         data = json.dumps({"trashType": trash_type, "trashID": trash_id, "trashcanID": self.trashcanID})
-        img = qrcode.make(data)
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+
+        qr.add_data(data)
+        qr.make(fit=True)
+
+        img = qr.make_image(fill_color="white", back_color="#00A8CC")
         img.save(filename)
 
     def handle_trash(self, trash_type):
