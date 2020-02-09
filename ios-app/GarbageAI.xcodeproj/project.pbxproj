@@ -11,12 +11,15 @@
 		984F080123EF84FE00267F62 /* QRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F080023EF84FE00267F62 /* QRData.swift */; };
 		985CE9E423EE7F5C005C8566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */; };
 		985CE9E623EE8163005C8566 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985CE9E523EE8163005C8566 /* SignInController.swift */; };
+		988F2E8D23EFF95A006052AA /* TrashMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988F2E8C23EFF95A006052AA /* TrashMapView.swift */; };
 		9893C27123EE7D550040FC56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27023EE7D550040FC56 /* AppDelegate.swift */; };
 		9893C27323EE7D550040FC56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27223EE7D550040FC56 /* SceneDelegate.swift */; };
 		9893C27523EE7D550040FC56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C27423EE7D550040FC56 /* HomeViewController.swift */; };
 		9893C27823EE7D550040FC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27623EE7D550040FC56 /* Main.storyboard */; };
 		9893C27A23EE7D560040FC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27923EE7D560040FC56 /* Assets.xcassets */; };
 		9893C27D23EE7D560040FC56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9893C27B23EE7D560040FC56 /* LaunchScreen.storyboard */; };
+		98C4FACF23EFD9AB00DEEB6C /* Trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C4FACE23EFD9AB00DEEB6C /* Trash.swift */; };
+		98C4FAD123EFE51700DEEB6C /* TrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C4FAD023EFE51700DEEB6C /* TrashViewController.swift */; };
 		98ECED4523EE8B1E0057320F /* ReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */; };
 		98ECED4723EE8EA80057320F /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4623EE8EA80057320F /* ScannerViewController.swift */; };
 		98ECED4923EE91190057320F /* TrashType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECED4823EE91190057320F /* TrashType.swift */; };
@@ -28,6 +31,7 @@
 		984F080023EF84FE00267F62 /* QRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRData.swift; sourceTree = "<group>"; };
 		985CE9E323EE7F5C005C8566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		985CE9E523EE8163005C8566 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		988F2E8C23EFF95A006052AA /* TrashMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMapView.swift; sourceTree = "<group>"; };
 		9893C26D23EE7D550040FC56 /* GarbageAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarbageAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9893C27023EE7D550040FC56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9893C27223EE7D550040FC56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		9893C27923EE7D560040FC56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9893C27C23EE7D560040FC56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9893C27E23EE7D560040FC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98C4FACE23EFD9AB00DEEB6C /* Trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash.swift; sourceTree = "<group>"; };
+		98C4FAD023EFE51700DEEB6C /* TrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashViewController.swift; sourceTree = "<group>"; };
 		98ECED4423EE8B1E0057320F /* ReplaceSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceSegue.swift; sourceTree = "<group>"; };
 		98ECED4623EE8EA80057320F /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		98ECED4823EE91190057320F /* TrashType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashType.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 				98ECED4823EE91190057320F /* TrashType.swift */,
 				98ECED4A23EE91B80057320F /* Database.swift */,
 				984F080023EF84FE00267F62 /* QRData.swift */,
+				98C4FACE23EFD9AB00DEEB6C /* Trash.swift */,
+				98C4FAD023EFE51700DEEB6C /* TrashViewController.swift */,
+				988F2E8C23EFF95A006052AA /* TrashMapView.swift */,
 			);
 			path = GarbageAI;
 			sourceTree = "<group>";
@@ -252,7 +261,10 @@
 				98ECED4923EE91190057320F /* TrashType.swift in Sources */,
 				985CE9E623EE8163005C8566 /* SignInController.swift in Sources */,
 				9893C27123EE7D550040FC56 /* AppDelegate.swift in Sources */,
+				98C4FACF23EFD9AB00DEEB6C /* Trash.swift in Sources */,
 				98ECED4523EE8B1E0057320F /* ReplaceSegue.swift in Sources */,
+				988F2E8D23EFF95A006052AA /* TrashMapView.swift in Sources */,
+				98C4FAD123EFE51700DEEB6C /* TrashViewController.swift in Sources */,
 				98ECED4B23EE91B80057320F /* Database.swift in Sources */,
 				9893C27323EE7D550040FC56 /* SceneDelegate.swift in Sources */,
 			);

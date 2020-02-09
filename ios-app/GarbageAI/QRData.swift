@@ -12,4 +12,7 @@ struct QRData: Codable {
     let trashType: TrashType
     let trashcanID: String
     let trashID: String
+    let latitude: Double
+    let longitude: Double
+    let trashcanCounts: [String: Int]
 }
