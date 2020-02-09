@@ -9,7 +9,7 @@
 import Foundation
 
 enum TrashType: String, Codable {
-    case trash, paper, metal, glass, plastic, cardboard, compost
+    case trash, paper, metal, glass, plastic, cardboard, compost, recycling = "landfill"
     
     static func getAll() -> [TrashType] {
         return [.trash, .paper, .metal, .glass, .plastic, .cardboard, compost]
@@ -29,6 +29,8 @@ enum TrashType: String, Codable {
             return "Plastic"
         case .compost:
             return "Compost"
+        case .recycling:
+            return "Recycling"
         case .cardboard:
             return "Cardboard"
         }
